@@ -1,0 +1,236 @@
+@import url("@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+.header {
+  display: flex;
+  object-fit: fill;
+  justify-content: center;
+  max-width: 1920px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+  background-image: url(./images/header.jpg);
+  border-radius: 15px;
+  
+}
+.header-info_box {
+  background-color: white;
+  width: 450px;
+  height: 118px;
+  text-align: center;
+  align-items: center;
+  margin-top: 250px;
+  margin-right: 750px;
+  border-radius: 3px;
+  
+}
+.header-info_box p{
+margin-top: 30px;
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 24px;
+}
+
+.recipes-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.recipe-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24%;
+  min-height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  /* округлили картинки */
+  background-color: black;
+  color: white;
+}
+
+.recipe-box:hover .view-btn {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  /* не применяется постепенное появление */
+}
+
+.recipe-box img {
+  width: 100%;
+}
+
+.recipe-box p {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.view-btn {
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0;
+}
+
+.search-input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 60px;
+  /* background-color: red; */
+}
+
+#search-input {
+  flex: 1;
+  border-radius: 16px;
+  border: none;
+  margin-right: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 16px;
+  letter-spacing: 2px;
+}
+
+#search-btn {
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  cursor: pointer;
+}
+
+.close-btn i {
+  font-size: 30px;
+}
+
+.left-part {
+  flex: 1;
+  background-color: darkgoldenrod;
+}
+
+.left-part img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-part {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.right-part__header {
+  margin-top: 30px;
+}
+
+.right-part__instructions {
+  
+  margin-top: 30px;
+  width: 80%;
+  
+  text-align: justify;
+}
+.ingredients-measurements-container{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 30px;
+  background-color: bisque;
+}
+.ingredients-measurements-container ul{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  list-style: none;
+}
+.ingredients-measurements-container ul li {
+  line-height: 30px;
+}
+.watch-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: black;
+  width: 150px;
+  height: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  text-align: center;
+}
